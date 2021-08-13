@@ -155,11 +155,20 @@ Use the getReviewsByRating function below to do the following:
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}
   ]
-*/
+*/    
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array, key1, rating) {
+    const newArray = [];
+
+    for(let i = 0; i < array.length; i++){
+      if(array[i][key1] >= rating && array[i][key1] < rating + 1){
+        newArray.push(array[i]);
+      }
+    }
+    return newArray;
   }
+
+  console.log(getReviewByRating(reviews, 'rating', 4));
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -175,8 +184,9 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(array) {
+    const newArray = [];
+    
   }
   
 
